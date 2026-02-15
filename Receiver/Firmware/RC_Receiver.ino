@@ -14,7 +14,7 @@ const byte Address[6] = "00009";                      //Must be same as Transmit
 //Receiver Data Type: Must be same as Transmitter
 struct __attribute__((packed)) Values{
   uint8_t Digital;
-  uint16_t Analog[6];
+  uint16_t Analog[8];
   int16_t Euler[2];
 }; 
 
@@ -62,8 +62,8 @@ void loop() {
     // 2. DPDT Switches (Pins D0, D1, D6, D7)
     Serial.print("DPDT_1: ");     Serial.print((Data.Digital >> 6) & 0x01);
     Serial.print("  DPDT_2: ");   Serial.print((Data.Digital >> 7) & 0x01);
-    Serial.print("  DPDT_3: ");   Serial.print((Data.Digital >> 0) & 0x01);
-    Serial.print("  DPDT_4: ");   Serial.println((Data.Digital >> 1) & 0x01);
+    Serial.print("  DPDT_3: ");   Serial.print((Data.Digital >> 1) & 0x01);
+    Serial.print("  DPDT_4: ");   Serial.println((Data.Digital >> 0) & 0x01);
 
     //3. Potetiometers (Pins A2 and A3)
     Serial.print("POT_1: ");      Serial.print(Data.Analog[2]);
@@ -79,8 +79,8 @@ void loop() {
     Serial.print("  JS_2_SW: ");  Serial.println((Data.Digital >> 3) & 0x01);
 
     //5. IMU Data (Pitch and Roll)
-    Serial.print("Pitch: ");      Serial.print((Data.Euler[1]) / 10);
-    Serial.print("  Roll: ");     Serial.println((Data.Euler[0] / 10));
+    Serial.print("Pitch: ");      Serial.print((Data.Euler[0]) / 10);
+    Serial.print("  Roll: ");     Serial.println((Data.Euler[1] / 10));
 
     Serial.println();
     
