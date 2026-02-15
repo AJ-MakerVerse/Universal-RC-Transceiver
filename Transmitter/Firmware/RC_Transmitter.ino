@@ -2,8 +2,8 @@
 Arduino Nano Pinout
   Digital Input:    |   Analog Input:    |    SPI Communication Pins:   |   I2C Communication Pins:
 
-  RX0 = DPDT_3      |   A0 = JS_1_VRy    |    D9  = CE                  |   A4 = SDA
-  TX1 = DPDT_4      |   A1 = JS_1_VRx    |    D10 = CSN                 |   A5 = SCL
+  RX0 = DPDT_4      |   A0 = JS_1_VRy    |    D9  = CE                  |   A4 = SDA
+  TX1 = DPDT_3      |   A1 = JS_1_VRx    |    D10 = CSN                 |   A5 = SCL
   D2  = PB_2        |   A2 = POT_1       |    D11 = MOSI                |
   D3  = JS_2_SW     |   A3 = POT_2       |    D12 = MISO                |
   D4  = JS_1_SW     |   A6 = JS_2_VRy    |    D13 = SCK                 |
@@ -54,7 +54,7 @@ bool running = false;                                 //IMU Tracking Status
 //Transmitter Data Type
 struct __attribute__((packed)) Values{
   uint8_t Digital;                                    //8 digital inputs packed into 8 bits (Bit-Packing)     :1 Bytes
-  uint16_t Analog[6];                                 //6 analog inputs (0 - 1023)                            :12 Bytes
+  uint16_t Analog[8];                                 //6 analog inputs (0 - 1023)                            :12 Bytes
   int16_t Euler[2];                                   //Euler Angles (Pitch and roll)                         :4 Bytes
 };                                                    //Total                                                 :17 Bytes < 32 Bytes
 
