@@ -34,6 +34,6 @@ If you notice stringing, abrasions, or if the parts aren't meshing perfectly, do
 * Tight Fit: If the cap stick, sand the sides down slightly, and ensure they move freely
 * Alignment: Ensure that the components are aligned with enclosure's slots.
 
-**You can also find the files on Printables:**
+**You can also find the files on Printables:**https://www.printables.com/model/1602552-universal-rc-transceiver
 
 
