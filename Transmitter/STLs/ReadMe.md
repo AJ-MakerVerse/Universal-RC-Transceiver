@@ -4,10 +4,10 @@ This folder contains the 3D-printable files for the transmitter enclosure. The d
 
 **STL Files**
 
-* Enclosure - Top.stl: The main faceplate with cutouts for joysticks, buttons, and switches.
-* Enclosure - Bottom.stl: The rear shell, designed to house the Universal PCB.
-* Potentiometer - Knob.stl: Custom-fit knobs for the two potentiometers (print 2x).
-* Button - Cap.stl: Protective caps for the tactile push buttons to improve surface area and feel (pint 3x). 
+* Enclosure - Top: The main faceplate with cutouts for joysticks, buttons, and switches.
+* Enclosure - Bottom: The rear shell, designed to house the Universal PCB.
+* Potentiometer - Knob: Custom-fit knobs for the two potentiometers (print 2x).
+* Button - Cap: Protective caps for the tactile push buttons to improve surface area and feel (pint 3x). 
 
 **Recommended Print Settings**  
 For the best fit and durability, use the following settings:
