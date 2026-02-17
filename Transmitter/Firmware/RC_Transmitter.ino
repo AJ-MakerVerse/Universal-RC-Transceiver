@@ -54,7 +54,7 @@ bool running = false;                                 //IMU Tracking Status
 //Transmitter Data Type
 struct __attribute__((packed)) Values{
   uint8_t Digital;                                    //8 digital inputs packed into 8 bits (Bit-Packing)     :1 Bytes
-  uint16_t Analog[8];                                 //6 analog inputs (0 - 1023)                            :12 Bytes
+  uint16_t Analog[6];                                 //6 analog inputs (0 - 1023)                            :12 Bytes
   int16_t Euler[2];                                   //Euler Angles (Pitch and roll)                         :4 Bytes
 };                                                    //Total                                                 :17 Bytes < 32 Bytes
 
