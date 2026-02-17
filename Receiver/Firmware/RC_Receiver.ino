@@ -14,7 +14,7 @@ const byte Address[6] = "00009";                      //Must be same as Transmit
 //Receiver Data Type: Must be same as Transmitter
 struct __attribute__((packed)) Values{
   uint8_t Digital;
-  uint16_t Analog[8];
+  uint16_t Analog[6];
   int16_t Euler[2];
 }; 
 
@@ -74,13 +74,13 @@ void loop() {
     Serial.print("  JS_1_VRy: "); Serial.print(Data.Analog[0]);
     Serial.print("  JS_1_SW: ");  Serial.print((Data.Digital >> 4) & 0x01);
 
-    Serial.print("  JS_2_VRx: "); Serial.print(Data.Analog[7]);
-    Serial.print("  JS_2_VRy: "); Serial.print(Data.Analog[6]);
+    Serial.print("  JS_2_VRx: "); Serial.print(Data.Analog[5]);
+    Serial.print("  JS_2_VRy: "); Serial.print(Data.Analog[4]);
     Serial.print("  JS_2_SW: ");  Serial.println((Data.Digital >> 3) & 0x01);
 
     //5. IMU Data (Pitch and Roll)
-    Serial.print("Pitch: ");      Serial.print((Data.Euler[0]) / 10);
-    Serial.print("  Roll: ");     Serial.println((Data.Euler[1] / 10));
+    Serial.print("Pitch: ");      Serial.print(Data.Euler[0] / 10.0, 1);
+    Serial.print("  Roll: ");     Serial.println(Data.Euler[1] / 10.0, 1);
 
     Serial.println();
     
